@@ -3,19 +3,20 @@
 > 
 
 [![NPM](https://img.shields.io/npm/v/react-checkboxes.svg)](https://www.npmjs.com/package/react-checkboxes) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![JavaScript Style Guide](https://img.shields.io/npm/l/checkbox-list-react.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 ## Implementation
-1. Install
+1. **Install**
 ```
 npm install --save checkbox-list-react
 ```
 
-2. Import
+2. **Import**
 ```
 import CheckBoxes from 'checkbox-list-react'
 ```
 
-3. Data input
+3. **Data input**
 ```
 list = []
 ```
@@ -29,7 +30,7 @@ inputs = {
 }
 ```
 
-4. Example Usage
+4. **Example Usage**
 
 ```
 export default class CheckboxContainer extends Component {
@@ -63,7 +64,7 @@ export default class CheckboxContainer extends Component {
   }
 }
 ```
-5. What should be rendered 
+5. **What should be rendered**
 
 - [ ] Almuerzo
 - [ ] Desayuno
@@ -71,7 +72,7 @@ export default class CheckboxContainer extends Component {
 - [ ] Cena
 - [ ] Bolsa de alimentos
 
-6. Output when checked
+6. **Output when checked**
 
 - [x] Almuerzo
 - [x] Desayuno
