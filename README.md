@@ -1,4 +1,4 @@
-# react-checkboxes
+# checkbox-list-react
 
 > 
 
@@ -6,24 +6,8 @@
 
 ## Install
 
-```bash
-npm install --save react-checkboxes
 ```
-
-## Usage
-
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'react-checkboxes'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+npm install --save checkbox-list-react
 ```
 
 ## License
