@@ -2,9 +2,8 @@ import React from 'react'
 import propTypes from 'prop-types'
 import cn from 'classnames'
 
-import './styles.css'
-
 import { parseList, parseInputs } from './helpers'
+import './styles.css'
 
 class CheckBoxes extends React.Component {
   constructor(props) {
@@ -25,27 +24,19 @@ class CheckBoxes extends React.Component {
     })
   }
 
-  getSnapshotBeforeUpdate(prevProps, prevState) {
+  componentDidUpdate (oldProps, oldState) {
     const { inputs } = this.state
     const newList = parseInputs(inputs)
 
-    if (prevState.inputs !== this.state.inputs) {
-      return {
+    if (oldState.inputs !== this.state.inputs) {
+      this.setState({ // eslint-disable-line
         inputs: inputs,
         list: newList
-      }
-    }
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    const { inputs } = this.state
-
-    if (snapshot !== null) {
-      if (this.props.hasOwnProperty('onChange')) {
-        this.props.onChange({
-          target: { name: this.props.name, value: inputs }
-        })
-      }
+      }, () => {
+        if (this.props.hasOwnProperty('onChange')) {
+          this.props.onChange({ target: { name: this.props.name, value: newList } })
+        }
+      })
     }
   }
 
@@ -73,7 +64,6 @@ class CheckBoxes extends React.Component {
             <input
               type='checkbox'
               name={item.name}
-              className={cn('-input-form__input')}
               onChange={this.onCheck}
               checked={item.checked}
               value={item.value}

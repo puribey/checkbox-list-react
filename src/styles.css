@@ -1,15 +1,5 @@
 /* add css styles here (optional) */
 
-.-input-form__label {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  color: rgba(0, 0, 0, 0.6);
-  letter-spacing: 0.22px;
-  text-align: left;
-  line-height: 32px;
-}
-
 .custom-checkbox {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -35,7 +25,7 @@
 
 .checkmark {
   position: absolute;
-  top: 2px;
+  top: 0;
   left: 0;
   height: 20px;
   width: 20px;
